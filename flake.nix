@@ -15,14 +15,16 @@
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
         config,
-        self',
-        inputs',
         pkgs,
-        system,
         ...
       }: {
         pre-commit.settings.hooks = {
           alejandra.enable = true;
+          statix.enable = true;
+          deadnix.enable = true;
+          nil.enable = true;
+          typos.enable = true;
+          commitizen.enable = true;
         };
 
         formatter = pkgs.alejandra;
