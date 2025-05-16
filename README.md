@@ -7,3 +7,4 @@
 - [ ] nil
 - [ ] statix
 - [ ] typos
+- [ ] nix-action
