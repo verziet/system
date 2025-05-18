@@ -16,6 +16,7 @@
       perSystem = {
         config,
         pkgs,
+        self',
         ...
       }: {
         pre-commit.settings.hooks = {
@@ -30,6 +31,12 @@
         formatter = pkgs.alejandra;
 
         packages.install-git-hooks = pkgs.writeShellScriptBin "install-git-hooks" config.pre-commit.installationScript;
+
+        apps.install-git-hooks = {
+          meta.description = "Installs git hooks defined in pre-commit";
+          program = "${self'.packages.install-git-hooks}/bin/install-git-hooks";
+          type = "app";
+        };
       };
       flake = {
         # The usual flake attributes can be defined here, including system-
