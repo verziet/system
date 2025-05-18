@@ -1,10 +1,16 @@
 # WIP
 
 ## Temporary notes
-- [ ] commitizen
-- [ ] deadnix
+- [x] commitizen
+- [x] deadnix
+- [x] nil
+- [x] statix
+- [x] typos
+- [ ] nixos configurations
+- [ ] home manager configurations
+- [ ] flake-root
+- [ ] ez-configs?
+- [ ] easy-hosts?
+- [ ] nix-action?
+- [ ] agenix?
 - [ ] flake checker?
-- [ ] nil
-- [ ] statix
-- [ ] typos
-- [ ] nix-action
