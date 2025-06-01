@@ -1,6 +1,6 @@
 {modules, ...}: {
   imports = [
-    "${modules}/desktop/hyprland"
+    "${modules}/desktop/gnome"
 
     "${modules}/hardware/bluetooth"
     "${modules}/hardware/pipewire"

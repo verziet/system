@@ -1,7 +1,5 @@
 {modules, ...}: {
   imports = [
-    "${modules}/desktop/hyprland"
-
     "${modules}/shell/zsh"
     "${modules}/shell/starship"
 
