@@ -8,7 +8,7 @@ in {
   config = lib.mkIf config.${moduleName}.enableModule {
     services = {
       desktopManager.gnome.enable = true;
-      desktopManager.gdm.enable = true;
+      displayManager.gdm.enable = true;
     };
   };
 
