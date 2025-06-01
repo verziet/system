@@ -1,0 +1,5 @@
+{
+  "verz@acheron" = {
+    groups = ["wheel"];
+  };
+}
