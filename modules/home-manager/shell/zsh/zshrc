@@ -42,7 +42,7 @@ shell() {
 run() {
   local pkgs="nixpkgs#$1"
   shift
-  nix run --impure --log-format internal-json -v "$pkgs" -- "$@" |& nom --json
+  nix run --impure "$pkgs" -- "$@"
 }
 
 bindkey "^H" backward-kill-word
