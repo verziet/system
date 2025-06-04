@@ -7,8 +7,8 @@
 in {
   config = lib.mkIf config.${moduleName}.enableModule {
     services = {
-      xserver.desktopManager.gnome.enable = lib.mkForce true;
-      gnome.core-utilities.enable = lib.mkOverride 999 false;
+      desktopManager.gnome.enable = lib.mkForce true;
+      gnome.core-apps.enable = lib.mkOverride 999 false;
     };
   };
 
