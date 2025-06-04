@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   moduleName = "zsh";
@@ -21,10 +22,7 @@ in {
         })
       ];
 
-      initContent = ''
-        bindkey "^H" backward-kill-word
-        bindkey "5~" kill-word
-      '';
+      initContent = lib.readFile ./zshrc;
 
       history = {
         extended = lib.mkDefault true;
@@ -32,6 +30,12 @@ in {
         size = lib.mkDefault 10000;
       };
     };
+
+    # for commands in zshrc
+    home.packages = with pkgs; [
+      nix-output-monitor
+      nh
+    ];
   };
 
   options.${moduleName}.enableModule = lib.mkOption {
