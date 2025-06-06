@@ -11,6 +11,7 @@ in {
     home.file = {
       ".config/uwsm/env" = {
         text = ''
+          export XDG_CURRENT_DESKTOP=Hyprland
           export NIXOS_OZONE_WL=1
 
           export QT_AUTO_SCREEN_SCALE_FACTOR=1
