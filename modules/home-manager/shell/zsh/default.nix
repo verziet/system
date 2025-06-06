@@ -33,7 +33,6 @@ in {
 
     # for commands in zshrc
     home.packages = with pkgs; [
-      nix-output-monitor
       nh
     ];
   };
